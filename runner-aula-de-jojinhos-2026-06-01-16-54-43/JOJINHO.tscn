@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://de40pcixkrprj"]
+
+[ext_resource type="Texture2D" uid="uid://ceofnyk57npfl" path="res://background.png" id="1_n26cp"]
+
+[node name="JOJO" type="Node2D" unique_id=2103217793]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2143355143]
+position = Vector2(563.99994, 345.99997)
+scale = Vector2(-3.6592162, 3.8780487)
+texture = ExtResource("1_n26cp")

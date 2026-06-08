@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://r1ao8lq7v2v0"]
+
+[ext_resource type="Script" uid="uid://dmkk2ni1bjfk3" path="res://ui_novinha.gd" id="1_tk4rb"]
+[ext_resource type="Texture2D" uid="uid://ceofnyk57npfl" path="res://background.png" id="2_6v2on"]
+[ext_resource type="FontFile" uid="uid://camsd1srjut0a" path="res://PressStart2P-Regular.ttf" id="3_f50py"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmv6b"]
+texture = ExtResource("2_6v2on")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0hvx"]
+bg_color = Color(0.43252316, 0.5865255, 0.91109705, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i634s"]
+bg_color = Color(0.61722, 0.58127356, 0.6741603, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xcjm"]
+bg_color = Color(0, 0.6880738, 0.67640406, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8atug"]
+bg_color = Color(0.38411015, 0.6130209, 0.8822357, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ml6t"]
+bg_color = Color(0.4071418, 0.65625995, 0.62315917, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggy75"]
+bg_color = Color(0.28050107, 0.6849022, 0.55165714, 1)
+
+[node name="ui_novinha" type="Control" unique_id=1045559468]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tk4rb")
+
+[node name="fundo" type="Panel" parent="." unique_id=1090179984]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pmv6b")
+
+[node name="title" type="Label" parent="." unique_id=2129779200]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -349.0
+offset_top = -240.0
+offset_right = 421.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_f50py")
+theme_override_font_sizes/font_size = 70
+text = "CORRIDINHA 
+   	PLUS"
+
+[node name="butao" type="VBoxContainer" parent="." unique_id=1057374057]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = 55.0
+offset_right = 279.0
+offset_bottom = 198.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 54
+
+[node name="jogar" type="Button" parent="butao" unique_id=355367551]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_f50py")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_t0hvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i634s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1xcjm")
+text = "JOGAR"
+
+[node name="desjogar" type="Button" parent="butao" unique_id=1766094779]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_f50py")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxFlat_8atug")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3ml6t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ggy75")
+text = "DESJOGAR/SAIR"
+
+[connection signal="pressed" from="butao/jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="butao/desjogar" to="." method="_on_desjogar_pressed"]
